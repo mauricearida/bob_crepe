@@ -11,7 +11,9 @@
   background: var(--color-black);
   padding-top: 0;
 }
-
+.footer:hover {
+  color: var(--color-golden);
+}
 .app__footer-links {
   width: 100%;
   display: flex;

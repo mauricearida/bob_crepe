@@ -4,12 +4,9 @@ import { images } from "../../constants";
 import "./AboutUs.css";
 
 const AboutUs = () => (
-  <div
-    className="app__aboutus app__bg flex__center section__padding"
-    id="about"
-  >
+  <div className="app__aboutus app__bg flex__center section__padding" id="about">
     <div className="app__aboutus-overlay flex__center">
-      <img src={images.G} alt="G_overlay" />
+      <img src={images.G} alt="G_overlay" loading="lazy" />
     </div>
 
     <div className="app__aboutus-content flex__center">
@@ -17,9 +14,8 @@ const AboutUs = () => (
         <h1 className="headtext__cormorant">About Us</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
         <p className="p__opensans">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra
-          adipiscing ultrices vulputate posuere tristique. In sed odio nec
-          aliquet eu proin mauris et.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quis pharetra adipiscing ultrices vulputate posuere tristique. In sed
+          odio nec aliquet eu proin mauris et.
         </p>
         <button type="button" className="custom__button">
           Know More
@@ -27,16 +23,15 @@ const AboutUs = () => (
       </div>
 
       <div className="app__aboutus-content_knife flex__center">
-        <img src={images.knife} alt="about_knife" />
+        <img src={images.knife} alt="about_knife" loading="lazy" />
       </div>
 
       <div className="app__aboutus-content_history">
         <h1 className="headtext__cormorant">Our Story</h1>
         <img src={images.spoon} alt="about_spoon" className="spoon__img" />
         <p className="p__opensans">
-          At somewhere around 8,000 square feet, Vango is as massive a space as
-          it was an undertaking to get just the right custom made elements from
-          around the world to fill the big rooms.
+          At somewhere around 8,000 square feet, Vango is as massive a space as it was an undertaking to get just the right custom made
+          elements from around the world to fill the big rooms.
         </p>
         <button type="button" className="custom__button">
           Our Story

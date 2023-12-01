@@ -20,6 +20,15 @@ import burger from "../assets/burger.webp";
 import chocolat from "../assets/chocolat.webp";
 import wine from "../assets/winee.jpg";
 import alcohol from "../assets/alcohol.jpg";
+import vango1 from "../assets/old-images/vango1.webp";
+import vango2 from "../assets/old-images/vango2.webp";
+import vango3 from "../assets/old-images/vango3.webp";
+import vango4 from "../assets/old-images/vango4.webp";
+import vango5 from "../assets/old-images/vango5.webp";
+import vango6 from "../assets/old-images/vango6.webp";
+import vango7 from "../assets/old-images/vango7.webp";
+import vango8 from "../assets/old-images/vango8.webp";
+import vango9 from "../assets/old-images/vango9.webp";
 
 export default {
   bg,
@@ -44,4 +53,13 @@ export default {
   gallery02,
   gallery03,
   gallery04,
+  vango1,
+  vango2,
+  vango3,
+  vango4,
+  vango5,
+  vango6,
+  vango7,
+  vango8,
+  vango9,
 };

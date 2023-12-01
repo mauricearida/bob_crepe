@@ -23,7 +23,11 @@ const Navbar = () => {
         </li>
 
         <li className="p__opensans">
-          <a href="#contact">Contact</a>
+          <a href="#contact">Find Us</a>
+        </li>
+
+        <li className="p__opensans">
+          <a href="#ourstory">Our Story</a>
         </li>
       </ul>
 
@@ -38,11 +42,6 @@ const Navbar = () => {
                   Home
                 </a>
               </li>
-              {/* <li>
-                <a href="#about" onClick={() => setToggleMenu(false)}>
-                  About
-                </a>
-              </li> */}
               <li>
                 <a href="#menu" onClick={() => setToggleMenu(false)}>
                   Menu
@@ -50,12 +49,17 @@ const Navbar = () => {
               </li>
               <li>
                 <a href="#reservation" onClick={() => setToggleMenu(false)}>
-                  reservation
+                  Reservation
                 </a>
               </li>
               <li>
                 <a href="#contact" onClick={() => setToggleMenu(false)}>
-                  Contact
+                  Find Us
+                </a>
+              </li>
+              <li>
+                <a href="#ourstory" onClick={() => setToggleMenu(false)}>
+                  Our Story
                 </a>
               </li>
             </ul>

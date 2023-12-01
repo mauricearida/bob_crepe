@@ -194,7 +194,6 @@ const SpecialMenu = () => {
         <SubHeading title="Menu that fits your palatte" />
         <h1 className="headtext__cormorant">Today&apos;s Special</h1>
       </div>
-
       <div style={{ marginTop: 15 }} className="sticky-box app__specialMenu-title">
         {Object.keys(stateIcons).map((state) => (
           <button type="button" className="custom__button" key={state} onClick={() => handleStateChange(state)}>
@@ -204,6 +203,12 @@ const SpecialMenu = () => {
           </button>
         ))}
       </div>
+      <div style={{ marginBottom: "1rem" }}>
+        <p className="p__cormorant">
+          All DRINKS, HOOKAH, and FOOD are sold as is. NO REFUNDS. Tax and 18% Gratuity are not included in the prices listed on this menu.
+        </p>
+      </div>
+
       {renderContent()}
     </div>
   );

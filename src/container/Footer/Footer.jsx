@@ -7,7 +7,7 @@ import "./Footer.css";
 import { BsTelephoneOutbound } from "react-icons/bs";
 
 const Footer = () => (
-  <div className="app__footer section__padding" id="login">
+  <div className="app__footer section__padding">
     <FooterOverlay />
     <Newsletter />
     <div className="app__footer-links">
@@ -23,13 +23,16 @@ const Footer = () => (
             <FiInstagram />
           </a>
         </div>
-        <p
-          style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "center", textAlign: "center", marginTop: "1rem" }}
-          className="p__opensans"
-        >
-          <BsTelephoneOutbound />
-          <a href="tel:+12155681020">215-568-1020</a>
-        </p>
+
+        <a href="tel:+12155681020" className="phone">
+          <p
+            style={{ display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", gap: "1rem", marginTop: "1rem" }}
+            className="p__opensans"
+          >
+            <BsTelephoneOutbound />
+            <span>215-568-1020</span>
+          </p>
+        </a>
       </div>
 
       {/* <div className="app__footer-links_work">

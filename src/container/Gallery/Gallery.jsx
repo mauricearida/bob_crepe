@@ -1,4 +1,4 @@
-import React from "react";
+import { useRef } from "react";
 import { BsInstagram, BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 
 import { SubHeading } from "../../components";
@@ -6,7 +6,7 @@ import { images } from "../../constants";
 import "./Gallery.css";
 
 const Gallery = () => {
-  const scrollRef = React.useRef(null);
+  const scrollRef = useRef(null);
 
   const scroll = (direction) => {
     const { current } = scrollRef;
@@ -21,22 +21,37 @@ const Gallery = () => {
   return (
     <div className="app__bg app__gallery flex__center">
       <div className="app__gallery-content">
-        <SubHeading title="Instagram" />
+        <SubHeading title="Vango" />
         <h1 className="headtext__cormorant">Photo Gallery</h1>
         <p className="p__opensans" style={{ color: "#AAAAAA", marginTop: "2rem" }}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis ipsum turpis elit elit scelerisque egestas mu.
+          We are conveniently located in Rittenhouse Square on 18th street between Sansom street and Chestnut street.
         </p>
-        <button type="button" className="custom__button">
+        {/* <button type="button" className="custom__button">
           View More
-        </button>
+        </button> */}
       </div>
       <div className="app__gallery-images">
         <div className="app__gallery-images_container" ref={scrollRef}>
-          {[images.gallery01, images.gallery02, images.gallery03, images.gallery04].map((image, index) => (
-            <div className="app__gallery-images_card flex__center" key={`gallery_image-${index + 1}`}>
-              <img src={image} alt="gallery_image" />
+          {/* {[images.gallery01, images.gallery02, images.gallery03, images.gallery04].map((image, index) => ( */}
+          {[
+            images.vango6,
+            images.vango1,
+            images.vango5,
+            images.vango4,
+            images.vango7,
+            images.vango3,
+            images.vango2,
+            images.vango8,
+            images.vango9,
+          ].map((image, index) => (
+            <a
+              className="app__gallery-images_card flex__center"
+              href="https://www.instagram.com/vangoloungeandskybar/"
+              key={`gallery_image-${index + 1}`}
+            >
+              <img src={image} alt="gallery_image" loading="lazy" />
               <BsInstagram className="gallery__image-icon" />
-            </div>
+            </a>
           ))}
         </div>
         <div className="app__gallery-images_arrows">
