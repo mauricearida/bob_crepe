@@ -1,32 +1,14 @@
 import React from "react";
 
 import { SubHeading } from "../../components";
-import { images, data } from "../../constants";
+import { images } from "../../constants";
 import "./Laurels.css";
-
-// const AwardCard = ({ award: { imgUrl, title, subtitle } }) => (
-//   <div className="app__laurels_reservation-card">
-//     <img src={imgUrl} alt="reservation" />
-//     <div className="app__laurels_reservation-card_content">
-//       <p className="p__cormorant" style={{ color: "#DCCA87" }}>
-//         {title}
-//       </p>
-//       <p className="p__opensans">{subtitle}</p>
-//     </div>
-//   </div>
-// );
 
 const Laurels = () => (
   <div className="app__bg app__wrapper section__padding" id="reservation">
     <div className="app__wrapper_info">
       <SubHeading title="reservation & recognition" />
       <h1 className="headtext__cormorant">Reserve Your Spot for the 2024 New Year's Eve</h1>
-
-      {/* <div className="app__laurels_reservation">
-        {data.reservation.map((award) => (
-          <AwardCard award={award} key={award.title} />
-        ))}
-      </div> */}
       <div className="reservation">
         <h5>You are one click away</h5>
         <a href="#" className="reservation-button">

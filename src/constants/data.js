@@ -1,5 +1,3 @@
-import images from "./images";
-
 const appetizers = [
   {
     title: "Slat and Pepper Wings",
@@ -18,17 +16,14 @@ const appetizers = [
     price: "$12",
     tags: "Lemon zest and black pepper",
   },
-
   {
     title: "Sweet Chili Wings",
     price: "$12",
   },
-
   {
     title: "Honey BBQ Wings",
     price: "$12",
   },
-
   {
     title: "Chicken tenders",
     price: "$12",
@@ -37,36 +32,30 @@ const appetizers = [
     title: "Buffalo Chicken tenders",
     price: "$12",
   },
-
   {
     title: "Chicken Quesadila",
     price: "$14",
     tags: "Sour cream and salsa",
   },
-
   {
     title: "Salsa and Chips",
     price: "$9",
     tags: "Pico de Gallo, tomato, onion, cilantro, salt, and pepper",
   },
-
   {
     title: "Mozarella Sticks",
     price: "$9",
   },
-
   {
     title: "Fried Calamari",
     price: "$14",
     tags: "Spicy mayo and marinara sauce",
   },
-
   {
     title: "Mussels",
     price: "$16",
     tags: "White wine, lemon and crostini",
   },
-
   {
     title: "Hummus",
     price: "$8",
@@ -559,87 +548,7 @@ const HookahAndFlavors = [
   },
 ];
 
-const wines = [
-  {
-    title: "Chapel Hill Shiraz",
-    price: "$56",
-    tags: "AU | Bottle",
-  },
-  {
-    title: "Catena Malbee",
-    price: "$59",
-    tags: "AU | Bottle",
-  },
-  {
-    title: "La Vieillw Rose",
-    price: "$44",
-    tags: "FR | 750 ml",
-  },
-  {
-    title: "Rhino Pale Ale",
-    price: "$31",
-    tags: "CA | 750 ml",
-  },
-  {
-    title: "Irish Guinness",
-    price: "$26",
-    tags: "IE | 750 ml",
-  },
-];
-const cocktails = [
-  {
-    title: "Aperol Sprtiz",
-    price: "$20",
-    tags: "Aperol | Villa Marchesi prosecco | soda | 30 ml",
-  },
-  {
-    title: "Dark 'N' Stormy",
-    price: "$16",
-    tags: "Dark rum | Ginger beer | Slice of lime",
-  },
-  {
-    title: "Daiquiri",
-    price: "$10",
-    tags: "Rum | Citrus juice | Sugar",
-  },
-  {
-    title: "Old Fashioned",
-    price: "$31",
-    tags: "Bourbon | Brown sugar | Angostura Bitters",
-  },
-  {
-    title: "Negroni",
-    price: "$26",
-    tags: "Gin | Sweet Vermouth | Campari | Orange garnish",
-  },
-];
-const reservation = [
-  {
-    imgUrl: images.award02,
-    title: "Bib Gourmond",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur.",
-  },
-  {
-    imgUrl: images.award01,
-    title: "Rising Star",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur.",
-  },
-  {
-    imgUrl: images.award05,
-    title: "AA Hospitality",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur.",
-  },
-  {
-    imgUrl: images.award03,
-    title: "Outstanding Chef",
-    subtitle: "Lorem ipsum dolor sit amet, consectetur.",
-  },
-];
-
 export default {
-  wines,
-  cocktails,
-  reservation,
   appetizers,
   entrees,
   wrapsAndBurgersAndFries,
