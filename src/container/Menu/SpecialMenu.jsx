@@ -5,23 +5,6 @@ import { data, images } from "../../constants";
 import "./SpecialMenu.css";
 
 const SpecialMenu = () => {
-  useEffect(() => {
-    document.addEventListener("DOMContentLoaded", function () {
-      const stickyBox = document.querySelector(".sticky-box");
-      const stopStickyPoint = document.querySelector(".stop-sticky-point");
-      const stopPointOffset = stopStickyPoint.offsetTop;
-
-      window.addEventListener("scroll", function () {
-        if (window.pageYOffset < stopPointOffset) {
-          stickyBox.style.top = `${Math.min(0, stopPointOffset - window.pageYOffset)}px`;
-        } else {
-          stickyBox.style.top = "0";
-        }
-      });
-    });
-  }, []);
-
-  // stop-sticky-point
   return (
     <div className="app__specialMenu flex__center section__padding sticky-container" id="menu">
       <div className="app__specialMenu-title">
@@ -29,25 +12,23 @@ const SpecialMenu = () => {
         <h1 className="headtext__cormorant">Today&apos;s Special</h1>
       </div>
 
-      <div className="app__specialMenu-title">
-        <div style={{ marginTop: 15 }} className="sticky-box">
-          <a type="button" className="custom__button">
-            Appretizers/Entrees
-          </a>
+      <div style={{ marginTop: 15 }} className="sticky-box app__specialMenu-title">
+        <a type="button" className="custom__button">
+          Appretizers/Entrees
+        </a>
 
-          <a type="button" className="custom__button">
-            View More
-          </a>
-          <a type="button" className="custom__button">
-            View More
-          </a>
-          <a type="button" className="custom__button">
-            View More
-          </a>
-          <a type="button" className="custom__button">
-            View More
-          </a>
-        </div>
+        <a type="button" className="custom__button">
+          View More
+        </a>
+        <a type="button" className="custom__button">
+          View More
+        </a>
+        <a type="button" className="custom__button">
+          View More
+        </a>
+        <a type="button" className="custom__button">
+          View More
+        </a>
       </div>
 
       {/* Appretizers     Entrees */}

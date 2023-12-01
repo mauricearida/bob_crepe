@@ -48,7 +48,6 @@ const StateComponent = () => {
 
   return (
     <div>
-      <h1>Current State: {currentState}</h1>
       {/* Render buttons for state changes with corresponding icons */}
       {Object.keys(stateIcons).map((state) => (
         <button key={state} onClick={() => handleStateChange(state)}>
