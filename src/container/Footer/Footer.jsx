@@ -4,6 +4,7 @@ import { FaTiktok } from "react-icons/fa6";
 import { FooterOverlay, Newsletter } from "../../components";
 import { images } from "../../constants";
 import "./Footer.css";
+import { BsTelephoneOutbound } from "react-icons/bs";
 
 const Footer = () => (
   <div className="app__footer section__padding" id="login">
@@ -14,6 +15,7 @@ const Footer = () => (
         <img src={images.vango} alt="footer_logo" />
         <p className="p__opensans">&quot;The best way to find yourself is to lose yourself in the service of others.&quot;</p>
         <img src={images.spoon} className="spoon__img" />
+
         <div className="app__footer-links_icons">
           <FaTiktok />
 
@@ -21,6 +23,13 @@ const Footer = () => (
             <FiInstagram />
           </a>
         </div>
+        <p
+          style={{ display: "flex", alignItems: "center", gap: "1rem", justifyContent: "center", textAlign: "center", marginTop: "1rem" }}
+          className="p__opensans"
+        >
+          <BsTelephoneOutbound />
+          <a href="tel:+12155681020">215-568-1020</a>
+        </p>
       </div>
 
       {/* <div className="app__footer-links_work">
