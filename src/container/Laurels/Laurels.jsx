@@ -1,11 +1,39 @@
-import { SubHeading } from "../../components";
-import { images } from "../../constants";
-import "./Laurels.css";
-import React, { useState } from "react";
+import { useState } from "react";
 
+import "./Laurels.css";
+import { images } from "../../constants";
+import { SubHeading } from "../../components";
+
+const defaultState = {
+  name: "",
+  tableNo: 1,
+};
 const Laurels = () => {
-  const [tableNumber, setTableNumber] = useState(2);
   const [isPaying, setIsPaying] = useState(false);
+  const [formState, setFormState] = useState({ ...defaultState });
+  const [error, setError] = useState("If you don't mention your name, your payment won't be recognised!");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    const { name } = formState;
+    if (!name.trim()) return setError("If you don't mention your name, your payment won't be recognised!");
+
+    const formData = new FormData();
+
+    // onSubmit(formData);
+
+    setFormState({ ...defaultState });
+  };
+
+  const handleChange = ({ target }) => {
+    const { value, name } = target;
+
+    setFormState((prevState) => ({ ...prevState, [name]: value }));
+    console.log("formState", formState);
+  };
+
+  const { name, tableNo } = formState;
 
   return (
     <div className="app__bg app__wrapper section__padding" id="reservation">
@@ -16,25 +44,36 @@ const Laurels = () => {
         <SubHeading title="reservation & recognition" />
         <h1 className="headtext__cormorant">Reserve Your Spot for the 2024 New Year's Eve</h1>
         {isPaying ? (
-          <div style={{ backgroundColor: "green", padding: "4vw" }}>
-            <h1 style={{ color: "black" }}>
-              {tableNumber} {tableNumber > 1 ? "Tables" : "Table"} ({tableNumber} {tableNumber > 1 ? "Bottles" : "Bottle"}, up to{" "}
-              {tableNumber * 4} people) is ${tableNumber * 400}
+          <form onSubmit={handleSubmit} style={{ backgroundColor: "green", padding: "2vw" }}>
+            <h1 style={{ color: "black", marginBottom: "1rem" }}>
+              {formState.tableNo} {formState.tableNo > 1 ? "Tables" : "Table"} ({formState.tableNo}{" "}
+              {formState.tableNo > 1 ? "Bottles" : "Bottle"}, up to {formState.tableNo * 4} people) is ${formState.tableNo * 400}
             </h1>
-            <h2>Upfront payment is 50% ${tableNumber * 200}</h2>
-            <h3>
-              Name
-              <input type="text" placeholder="Reservation Name" />
-            </h3>
-            <h3>
-              Tables
-              <input type="number" min={1} max={10} value={tableNumber} />
-            </h3>
-            <button type="submit">Confirm</button>
-          </div>
+            <h2 style={{ marginBottom: "1rem" }}>Upfront payment is 50% ${formState.tableNo * 200}</h2>
+            <div style={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
+              <h2>Name</h2>
+              <div style={{ display: "flex", flexDirection: "column" }}>
+                <input
+                  type="text"
+                  name="name"
+                  value={name}
+                  onChange={handleChange}
+                  placeholder="Reservation Name"
+                  style={{ padding: ".4rem" }}
+                />
+                {error && <h4 style={{ color: "red", marginTop: 8 }}>{error}</h4>}
+              </div>
+            </div>
+            <div style={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
+              <h2>No of tables</h2>
+              <input type="number" name="tableNo" value={tableNo} onChange={handleChange} style={{ padding: ".4rem" }} min={1} max={10} />
+            </div>
+            <button className="custom__button" type="submit">
+              Confirm
+            </button>
+          </form>
         ) : (
           <div className="reservation">
-            {/* <h5>Reserve your table now</h5> */}
             <button onClick={() => setIsPaying(true)} type="button" className="reservation-button">
               <span className="reservation-h5">Reserve your table now with</span>
               <svg aria-label="PayPal" xmlns="http://www.w3.org/2000/svg" width="90" height="33" viewBox="34.417 0 90 33">
