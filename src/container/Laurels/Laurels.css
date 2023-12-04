@@ -21,9 +21,9 @@
   margin-top: 9vh;
 }
 
-.reservation-h5 {
+/* .reservation-h5 {
   font-size: clamp(0.85rem, 0.85rem +1vw, 1.5rem);
-}
+} */
 
 .reservation-button {
   display: flex;
@@ -34,16 +34,19 @@
   box-shadow: inset 0 1px 0 0 #ffd699;
   padding: 0.75rem;
   margin-top: 1rem;
+  cursor: pointer;
 }
-.reservation h5 {
+.reservation-h5 {
   font-family: var(--font-base);
-  color: var(--color-white);
+  /* color: var(--color-white); */
+  color: black;
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: capitalize;
   font-feature-settings: "tnum" on, "lnum" on;
   line-height: 29.9px;
-  font-size: 23px;
+  font-size: clamp(0.85rem, 0.85rem + 0.6vw, 1.5rem);
+  white-space: nowrap;
 }
 
 .reservation-button span {
