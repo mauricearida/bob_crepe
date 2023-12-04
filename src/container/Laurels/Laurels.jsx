@@ -11,7 +11,7 @@ const defaultState = {
 const Laurels = () => {
   const [isPaying, setIsPaying] = useState(false);
   const [formState, setFormState] = useState({ ...defaultState });
-  const [error, setError] = useState("If you don't mention your name, your payment won't be recognised!");
+  const [error, setError] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,11 +19,8 @@ const Laurels = () => {
     const { name } = formState;
     if (!name.trim()) return setError("If you don't mention your name, your payment won't be recognised!");
 
-    const formData = new FormData();
-
-    // onSubmit(formData);
-
     setFormState({ ...defaultState });
+    console.log("formState", formState);
   };
 
   const handleChange = ({ target }) => {
@@ -44,12 +41,12 @@ const Laurels = () => {
         <SubHeading title="reservation & recognition" />
         <h1 className="headtext__cormorant">Reserve Your Spot for the 2024 New Year's Eve</h1>
         {isPaying ? (
-          <form onSubmit={handleSubmit} style={{ backgroundColor: "green", padding: "2vw" }}>
+          <form onSubmit={handleSubmit} style={{ padding: "2vw", lineHeight: 1.3 }}>
             <h1 style={{ color: "black", marginBottom: "1rem" }}>
               {formState.tableNo} {formState.tableNo > 1 ? "Tables" : "Table"} ({formState.tableNo}{" "}
               {formState.tableNo > 1 ? "Bottles" : "Bottle"}, up to {formState.tableNo * 4} people) is ${formState.tableNo * 400}
             </h1>
-            <h2 style={{ marginBottom: "1rem" }}>Upfront payment is 50% ${formState.tableNo * 200}</h2>
+            <h2 style={{ marginBottom: "1rem", fontSize: "1.45rem" }}>Upfront payment is 50% ${formState.tableNo * 200}</h2>
             <div style={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
               <h2>Name</h2>
               <div style={{ display: "flex", flexDirection: "column" }}>
