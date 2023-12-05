@@ -9,29 +9,25 @@ export const defaultState = {
   name: "",
   tableNo: 1,
 };
+
 const Laurels = () => {
+  const [error, setError] = useState("");
+  const [show, setShow] = useState(false);
+  const [success, setSuccess] = useState(0);
+  const [orderId, setOrderId] = useState("");
   const [isPaying, setIsPaying] = useState(false);
   const [formState, setFormState] = useState({ ...defaultState });
-  const [error, setError] = useState("");
-
-  const [success, setSuccess] = useState(0);
-  const [show, setShow] = useState(false);
-
-  // const [errorMessage, setErrorMessage] = useState("");
-  const [orderId, setOrderId] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const { name } = formState;
     if (!name.trim()) return setError("Name Required!");
-
-    // setFormState({ ...defaultState });
-    // console.log("formState", formState);
   };
 
   const handleChange = ({ target }) => {
     const { value, name } = target;
+
     setSuccess(0);
     setError("");
     setFormState((prevState) => ({ ...prevState, [name]: value }));
@@ -48,7 +44,7 @@ const Laurels = () => {
         <SubHeading title="reservation & recognition" />
         <h1 className="headtext__cormorant">Reserve Your Spot for the 2024 New Year's Eve</h1>
         {isPaying ? (
-          <form onSubmit={handleSubmit} style={{ padding: "2vw", lineHeight: 1.3 }}>
+          <form onSubmit={handleSubmit} style={{ paddingVertical: "2vw", lineHeight: 1.3 }}>
             <h1 style={{ color: "white", marginBottom: "1rem" }}>
               {formState.tableNo} {formState.tableNo > 1 ? "Tables" : "Table"} ({formState.tableNo}{" "}
               {formState.tableNo > 1 ? "Bottles" : "Bottle"}, up to {formState.tableNo * 4} people) is ${formState.tableNo * 400}
