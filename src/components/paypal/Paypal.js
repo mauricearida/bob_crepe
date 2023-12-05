@@ -2,7 +2,7 @@ import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
 
 import { defaultState } from "../../container/Laurels/Laurels";
 
-function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrderId, show, success, orderId }) {
+function Paypal({ formState, setFormState, setSuccess, setError, setOrderId, show, success, orderId }) {
   const createOrder = (data, actions) => {
     return actions.order
       .create({
@@ -43,15 +43,10 @@ function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrd
     intent: "capture",
   };
 
-  const handleConfirm = () => {
-    if (!formState.name.trim()) return setError("Name Required!");
-    setShow(true);
-    setError("");
-  };
   return (
     <div className="App">
       <PayPalScriptProvider options={initialOptions}>
-        <button className="custom__button" type="submit" onClick={handleConfirm}>
+        <button className="custom__button" type="submit">
           Confirm
         </button>
 
@@ -73,6 +68,7 @@ function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrd
             <h1 style={{ color: "green" }}>Payment Successful (ID: {orderId})</h1>
           </div>
         )}
+
         {success === 2 && (
           <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
             <img src="error.webp" width={30} height={30} alt="" />

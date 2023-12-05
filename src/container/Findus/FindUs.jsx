@@ -12,7 +12,12 @@ const FindUs = () => (
         Find Us
       </h1>
       <div className="app__wrapper-content">
-        <p className="p__opensans">Vango Sky Bar & Lounge 116 S. 18th St. Philadelphia, PA 19103</p>
+        <p style={{ marginBottom: "1rem" }} className="p__opensans">
+          Vango Sky Bar & Lounge 116 S. 18th St. Philadelphia, PA 19103
+        </p>
+        <a href="mailto:info@vangoloungeandskybar.com">
+          <p className="p__opensans">info@vangoloungeandskybar.com</p>
+        </a>
         <a href="tel:+12155681020">
           <p style={{ display: "flex", alignItems: "center", gap: "1rem", marginTop: "1rem" }} className="p__opensans">
             <BsTelephoneOutbound />

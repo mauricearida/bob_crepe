@@ -23,6 +23,9 @@ const Laurels = () => {
 
     const { name } = formState;
     if (!name.trim()) return setError("Name Required!");
+
+    setShow(true);
+    setError("");
   };
 
   const handleChange = ({ target }) => {
@@ -50,7 +53,7 @@ const Laurels = () => {
               {formState.tableNo > 1 ? "Bottles" : "Bottle"}, up to {formState.tableNo * 4} people) is ${formState.tableNo * 400}
             </h1>
             <h2 style={{ marginBottom: "1rem", fontSize: "1.45rem", color: "white" }}>Upfront payment is 50% ${formState.tableNo * 200}</h2>
-            <div style={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
+            <div style={{ marginBottom: "1.5rem", display: "flex", gap: "1rem" }}>
               <h2 style={{ color: "white" }}>Name</h2>
               <div style={{ display: "flex", flexDirection: "column" }}>
                 <input
@@ -64,24 +67,23 @@ const Laurels = () => {
                 {error && <h4 style={{ color: "red", marginTop: 8 }}>{error}</h4>}
               </div>
             </div>
+
             <div style={{ marginBottom: "1rem", display: "flex", gap: "1rem" }}>
               <h2 style={{ color: "white" }}>No of tables</h2>
               <input type="number" name="tableNo" value={tableNo} onChange={handleChange} style={{ padding: ".4rem" }} min={1} max={10} />
             </div>
-            {/* <button className="custom__button" type="submit">
-              Confirm
-            </button> */}
+
             <Paypal
+              show={show}
+              error={error}
+              orderId={orderId}
+              success={success}
+              setShow={setShow}
+              setError={setError}
               formState={formState}
               setSuccess={setSuccess}
-              setShow={setShow}
               setOrderId={setOrderId}
-              show={show}
-              success={success}
               setFormState={setFormState}
-              orderId={orderId}
-              error={error}
-              setError={setError}
               handleSubmit={handleSubmit}
             />
           </form>
