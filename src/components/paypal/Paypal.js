@@ -1,5 +1,5 @@
 import { PayPalButtons, PayPalScriptProvider } from "@paypal/react-paypal-js";
-import { useState } from "react";
+
 import { defaultState } from "../../container/Laurels/Laurels";
 
 function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrderId, show, success, orderId }) {
@@ -10,7 +10,6 @@ function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrd
           {
             description: formState.name,
             amount: {
-              // value: 1,
               value: Number(formState.tableNo) * 200,
             },
           },
@@ -18,12 +17,11 @@ function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrd
       })
       .then((orderID) => {
         setFormState({ ...defaultState });
-        console.log(orderID);
         setOrderId(orderID);
         return orderID;
       })
       .catch((error) => {
-        console.log("error :>> ", error);
+        setSuccess(2);
       });
   };
 
@@ -46,7 +44,7 @@ function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrd
   };
 
   const handleConfirm = () => {
-    if (!formState.name.trim()) return setError("Shu esmak Ya mokh");
+    if (!formState.name.trim()) return setError("Name Required!");
     setShow(true);
     setError("");
   };
@@ -54,7 +52,6 @@ function Paypal({ formState, setFormState, setSuccess, setShow, setError, setOrd
     <div className="App">
       <PayPalScriptProvider options={initialOptions}>
         <button className="custom__button" type="submit" onClick={handleConfirm}>
-          {/* disabled={!formState.name.trim()} */}
           Confirm
         </button>
 
