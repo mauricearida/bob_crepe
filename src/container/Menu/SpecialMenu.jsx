@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-
+import { useState } from "react";
 import { MenuItem } from "../../components";
 import Logo from "../../assets/crepe/crepe_logo.webp";
 
@@ -8,7 +7,6 @@ import "./SpecialMenu.css";
 
 const SpecialMenu = () => {
   const [currentState, setCurrentState] = useState("Crêpe");
-  const [menuVisible, setMenuVisible] = useState(true);
 
   const handleStateChange = (newState) => {
     setCurrentState(newState);
@@ -22,32 +20,6 @@ const SpecialMenu = () => {
       behavior: "smooth",
     });
   };
-
-  useEffect(() => {
-    let prevScrollPos = window.scrollY;
-
-    const handleScroll = () => {
-      const currentScrollPos = window.scrollY;
-
-      if (currentScrollPos > prevScrollPos && currentScrollPos > 2) {
-        // Scrolling down and past 2 cm
-        setMenuVisible(false);
-      } else {
-        // Scrolling up or not past 2 cm
-        setMenuVisible(true);
-      }
-
-      prevScrollPos = currentScrollPos;
-    };
-
-    // Add scroll event listener
-    window.addEventListener("scroll", handleScroll);
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   const Crepes = () => (
     <div className="app__specialMenu-menu">
