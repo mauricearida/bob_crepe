@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { SubHeading, MenuItem } from "../../components";
+import Logo from "../../assets/crepe/crepe_logo.webp";
+
 import { data, images } from "../../constants";
 import "./SpecialMenu.css";
 import {
@@ -16,7 +18,7 @@ import {
 } from "react-icons/fa";
 
 const SpecialMenu = () => {
-  const [currentState, setCurrentState] = useState("dishes");
+  const [currentState, setCurrentState] = useState("Crêpe");
 
   const handleStateChange = (newState) => {
     setCurrentState(newState);
@@ -31,132 +33,174 @@ const SpecialMenu = () => {
     });
   };
 
-  const Appetizers = () => (
+  const Crepes = () => (
     <div className="app__specialMenu-menu">
       <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Appetizers</p>
+        <p className="app__specialMenu-menu_heading">Crêpes</p>
         <div className="app__specialMenu_menu_items">
-          {data.appetizers.map((appetizer, index) => (
-            <MenuItem key={appetizer.title + index} title={appetizer.title} price={appetizer.price} tags={appetizer.tags} />
+          {data.crepes.map((crepe, index) => (
+            <MenuItem key={crepe.title + index} title={crepe.title} price={Number(crepe.price).toFixed(2)} />
           ))}
         </div>
       </div>
 
       <div className="app__specialMenu-menu_img">
-        <img src={images.entrees} loading="lazy" alt="entrees__img" />
+        <img src={images.creppfle} loading="lazy" alt="crepe__img" />
       </div>
 
       <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Entrees</p>
+        <p className="app__specialMenu-menu_heading">Crêpffle Speciality</p>
         <div className="app__specialMenu_menu_items">
-          {data.entrees.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={entree.price} tags={entree.tags} />
+          {data.crepffle.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+      <div className="app__specialMenu-menu_img">
+        <img src={images.crepe_red} loading="lazy" alt="Crêpffle__img" />
+      </div>
+    </div>
+  );
+
+  const SaltyAndWaffle = () => (
+    <div className="app__specialMenu-menu">
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Salty Crêpes</p>
+        <div className="app__specialMenu_menu_items">
+          {data.salty_crepes.map((salty, index) => (
+            <MenuItem key={salty.title + index} title={salty.title} price={Number(salty.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.salty} loading="lazy" alt="salty__img" />
+      </div>
+
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Honkong Egg Waffle</p>
+        <div className="app__specialMenu_menu_items">
+          {data.honkong_egg_waffle.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Honkong} loading="lazy" alt="Honkong__img" />
+      </div>
+    </div>
+  );
+
+  const Sticks = () => (
+    <div className="app__specialMenu-menu">
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Pancake Sticks</p>
+        <div className="app__specialMenu_menu_items">
+          {data.pancake_stick.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Pancake_stick} loading="lazy" alt="burger__img" />
+      </div>
+
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Waffle Stick</p>
+        <div className="app__specialMenu_menu_items">
+          {data.waffle_stick.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Waffle_stick} loading="lazy" alt="burger__img" />
+      </div>
+    </div>
+  );
+
+  const SavioardiBiscuits = () => (
+    <div className="app__specialMenu-menu">
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Mini Pancakes</p>
+        <div className="app__specialMenu_menu_items">
+          {data.mini_pancake.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Mini_pancacke} loading="lazy" alt="mini_pancacke__img" />
+      </div>
+
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Savioardi Biscuits</p>
+        <div className="app__specialMenu_menu_items">
+          {data.Savioardi_Biscuits.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Sarvioardi} loading="lazy" alt="Sarvioardi__img" />
+      </div>
+    </div>
+  );
+
+  const Chimney = () => (
+    <div className="app__specialMenu-menu">
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Chimney Cakes</p>
+        <div className="app__specialMenu_menu_items">
+          {data.Chimney_cakes.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Chimney_cakes} loading="lazy" alt="Chimney_cakes__img" />
+      </div>
+
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Chocolat Fountains</p>
+        <div className="app__specialMenu_menu_items">
+          {data.chocolat_fountain.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
           ))}
         </div>
       </div>
     </div>
   );
 
-  const WrapsBurgersFriesSalads = () => (
+  const HotChocolat = () => (
     <div className="app__specialMenu-menu">
       <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Wraps/Burgers/Fries</p>
+        <p className="app__specialMenu-menu_heading">Hot Chocolat</p>
         <div className="app__specialMenu_menu_items">
-          {data.wrapsAndBurgersAndFries.map((appetizer, index) => (
-            <MenuItem key={appetizer.title + index} title={appetizer.title} price={appetizer.price} tags={appetizer.tags} />
+          {data.hot_chocolat.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer.price).toFixed(2)} />
           ))}
         </div>
       </div>
-
       <div className="app__specialMenu-menu_img">
-        <img src={images.burger} loading="lazy" alt="burger__img" />
+        <img src={images.Hot_chocolat} loading="lazy" alt="hot_chocolat__img" />
       </div>
-
       <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Salads</p>
+        <p className="app__specialMenu-menu_heading">S’mores</p>
         <div className="app__specialMenu_menu_items">
-          {data.salads.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={entree.price} tags={entree.tags} />
+          {data.Smores.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
           ))}
         </div>
       </div>
-    </div>
-  );
-
-  const DessertsSoftDrinks = () => (
-    <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Desserts</p>
-        <div className="app__specialMenu_menu_items">
-          {data.desserts.map((appetizer, index) => (
-            <MenuItem key={appetizer.title + index} title={appetizer.title} price={appetizer.price} tags={appetizer.tags} />
-          ))}
-        </div>
-      </div>
-
       <div className="app__specialMenu-menu_img">
-        <img src={images.chocolat} loading="lazy" alt="burger__img" />
-      </div>
-
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Soft Beverages</p>
-        <div className="app__specialMenu_menu_items">
-          {data.softBeverages.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={entree.price} tags={entree.tags} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
-  const RedAndWhiteWine = () => (
-    <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Red Wine</p>
-        <div className="app__specialMenu_menu_items">
-          {data.redWine.map((appetizer, index) => (
-            <MenuItem key={appetizer.title + index} title={appetizer.title} price={appetizer.price} tags={appetizer.tags} />
-          ))}
-        </div>
-      </div>
-
-      <div className="app__specialMenu-menu_img">
-        <img src={images.wine} loading="lazy" alt="burger__img" />
-      </div>
-
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">White Wine</p>
-        <div className="app__specialMenu_menu_items">
-          {data.whiteWine.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={entree.price} tags={entree.tags} />
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-
-  const VangoCocktailsAndBeers = () => (
-    <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Bottle Service</p>
-        <div className="app__specialMenu_menu_items">
-          {data.bottleService.map((appetizer, index) => (
-            <MenuItem key={appetizer.title + index} title={appetizer.title} price={appetizer.price} tags={appetizer.tags} />
-          ))}
-        </div>
-      </div>
-
-      <div className="app__specialMenu-menu_img">
-        <img src={images.alcohol} loading="lazy" alt="burger__img" />
-      </div>
-
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Hookah And its Flavors</p>
-        <div className="app__specialMenu_menu_items">
-          {data.HookahAndFlavors.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={entree.price} tags={entree.tags} />
-          ))}
-        </div>
+        <img src={images.Hot_chocolat} loading="lazy" alt="hot_chocolat__img" />
       </div>
     </div>
   );
@@ -164,41 +208,42 @@ const SpecialMenu = () => {
   // Render content based on the current state
   const renderContent = () => {
     switch (currentState) {
-      case "dishes":
-        return <Appetizers />;
-      case "burgerFriesWraps":
-        return <WrapsBurgersFriesSalads />;
-      case "DessertsSoftDrinks":
-        return <DessertsSoftDrinks />;
-      case "redAndWhiteWine":
-        return <RedAndWhiteWine />;
-      case "Alcohol":
-        return <VangoCocktailsAndBeers />;
+      case "Crêpe":
+        return <Crepes />;
+      case "Salty and Waffles":
+        return <SaltyAndWaffle />;
+      case "Sticks":
+        return <Sticks />;
+      case "Savioardi Biscuits":
+        return <SavioardiBiscuits />;
+      case "Chimney":
+        return <Chimney />;
+      case "Hot Chocolat":
+        return <HotChocolat />;
       default:
-        return <Appetizers />;
+        return <Crepes />;
     }
   };
 
   // Icon components for each state
   const stateIcons = {
-    dishes: currentState === "dishes" ? <FaUtensils size={15} /> : <FaUtensilsOutline size={15} />,
-    burgerFriesWraps: currentState === "burgerFriesWraps" ? <FaHamburger size={15} /> : <FaHamburgerOutline size={15} />,
-    DessertsSoftDrinks: currentState === "Desserts/SoftDrinks" ? <FaIceCream size={15} /> : <FaIceCreamOutline size={15} />,
-    redAndWhiteWine: currentState === "redAndWhiteWine" ? <FaWineBottle size={15} /> : <FaWineBottleOutline size={15} />,
-    Alcohol: currentState === "Alcohol" ? <FaBeer size={15} /> : <FaBeerOutline size={15} />,
+    Crêpes: "Crêpes",
+    "Salty and Waffles": "Salty and Waffles",
+    "Savioardi Biscuits": "Savioardi Biscuits",
+    Sticks: "Sticks",
+    Chimney: "Chimney",
+    "Hot Chocolat": "Hot Chocolat",
   };
 
   return (
     <div className="app__specialMenu flex__center section__padding sticky-container" id="menu">
       <div className="app__specialMenu-title">
-        <SubHeading title="Menu that fits your palatte" />
-        <h1 className="headtext__cormorant">Today&apos;s Special</h1>
+        <img src={Logo} alt="logo" className="logo" />
+        <h1 className="headtext__cormorant">The Sweets' New Era</h1>
       </div>
       <div style={{ marginTop: 15 }} className="sticky-box app__specialMenu-title">
         {Object.keys(stateIcons).map((state) => (
           <button type="button" className="custom__button" key={state} onClick={() => handleStateChange(state)}>
-            {stateIcons[state]}
-            &nbsp;
             {state.charAt(0).toUpperCase() + state.slice(1)}
           </button>
         ))}

@@ -1,6 +1,6 @@
 import React from "react";
 import { FiInstagram } from "react-icons/fi";
-import { FaTiktok } from "react-icons/fa6";
+import { FaWhatsapp } from "react-icons/fa6";
 import { FooterOverlay, Newsletter } from "../../components";
 import { images } from "../../constants";
 import "./Footer.css";
@@ -9,28 +9,29 @@ import { BsTelephoneOutbound } from "react-icons/bs";
 const Footer = () => (
   <div className="app__footer section__padding">
     <FooterOverlay />
-    <Newsletter />
     <div className="app__footer-links">
       <div className="app__footer-links_logo">
-        <img src={images.vango} alt="footer_logo" />
+        <img src={images.Logo} alt="footer_logo" />
         <p className="p__opensans">&quot;The best way to find yourself is to lose yourself in the service of others.&quot;</p>
         <img src={images.spoon} className="spoon__img" alt="spoon__img" />
 
         <div className="app__footer-links_icons">
-          <FaTiktok />
+          <a href="https://wa.me/+96176378479">
+            <FaWhatsapp />
+          </a>
 
-          <a href="https://www.instagram.com/vangoloungeandskybar/">
+          <a href="https://www.instagram.com/crepffle_/">
             <FiInstagram />
           </a>
         </div>
 
-        <a href="tel:+12155681020" className="phone">
+        <a href="tel:+96176378479" className="phone">
           <p
             style={{ display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", gap: "1rem", marginTop: "1rem" }}
             className="p__opensans"
           >
             <BsTelephoneOutbound />
-            <span>215-568-1020</span>
+            <span>76 378 479</span>
           </p>
         </a>
       </div>
@@ -44,7 +45,7 @@ const Footer = () => (
     </div>
 
     <div className="footer__copyright">
-      <p className="p__opensans">2023 Vango. All Rights reserved.</p>
+      <p className="p__opensans">2023 Crepffle. All Rights reserved.</p>
     </div>
   </div>
 );

@@ -1,20 +1,18 @@
-import React from "react";
-
 import { FindUs, Footer, Gallery, Header, Intro, Laurels, SpecialMenu } from "./container";
 import { Navbar } from "./components";
 import "./App.css";
 
 const App = () => (
   <div>
-    <Navbar />
-    <Header />
+    {/* <Navbar /> */}
+    {/* <Header /> */}
     {/* <AboutUs /> */}
     {/* <Chef /> */}
-    <Intro />
-    <Laurels />
+    {/* <Intro /> */}
+    {/* <Laurels /> */}
     <SpecialMenu />
-    <Gallery />
-    <FindUs />
+    {/* <Gallery /> */}
+    {/* <FindUs /> */}
     <Footer />
   </div>
 );

@@ -1,3 +1,10 @@
+.logo {
+  aspect-ratio: 1;
+  width: 25vw;
+  max-width: 200px;
+  border-radius: 12%;
+}
+
 .sticky-container {
   position: relative;
 }

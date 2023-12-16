@@ -1,7 +1,7 @@
 import bg from "../assets/bg.png";
 import chef from "../assets/chef.png";
 import knife from "../assets/knife.png";
-import logo from "../assets/logo.png";
+
 import menu from "../assets/menu.webp";
 import overlaybg from "../assets/overlaybg.png";
 import gallery01 from "../assets/gallery01.png";
@@ -29,12 +29,24 @@ import vango6 from "../assets/old-images/vango6.webp";
 import vango7 from "../assets/old-images/vango7.webp";
 import vango8 from "../assets/old-images/vango8.webp";
 import vango9 from "../assets/old-images/vango9.webp";
+//=========================================
+import creppfle from "../assets/crepe/crepffle.jpeg";
+import crepe_red from "../assets/crepe/crepe_red.jpeg";
+import salty from "../assets/crepe/salty.jpeg";
+import waffle from "../assets/crepe/waffle.jpeg";
+import Logo from "../assets/crepe/crepe_logo.webp";
+import Waffle_stick from "../assets/crepe/waffle_stick.jpeg";
+import Pancake_stick from "../assets/crepe/pancake_stick.jpeg";
+import Honkong from "../assets/crepe/honkong.jpeg";
+import Mini_pancacke from "../assets/crepe/mini_pancacke.jpeg";
+import Sarvioardi from "../assets/crepe/sarvioardi.jpeg";
+import Chimney_cakes from "../assets/crepe/chimney_cakes.jpeg";
+import Hot_chocolat from "../assets/crepe/hot_chocolat.jpeg";
 
 export default {
   bg,
   chef,
   knife,
-  logo,
   menu,
   overlaybg,
   spoon,
@@ -62,4 +74,16 @@ export default {
   vango7,
   vango8,
   vango9,
+  creppfle,
+  crepe_red,
+  salty,
+  waffle,
+  Logo,
+  Waffle_stick,
+  Pancake_stick,
+  Honkong,
+  Mini_pancacke,
+  Sarvioardi,
+  Chimney_cakes,
+  Hot_chocolat,
 };
