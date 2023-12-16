@@ -1,4 +1,3 @@
-import React from "react";
 import { FiInstagram } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa6";
 import { FooterOverlay, Newsletter } from "../../components";
@@ -45,7 +44,7 @@ const Footer = () => (
     </div>
 
     <div className="footer__copyright">
-      <p className="p__opensans">2023 Crepffle. All Rights reserved.</p>
+      <p className="p__opensans">2023 Crêpffle. All Rights reserved.</p>
     </div>
   </div>
 );

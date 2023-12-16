@@ -1,24 +1,14 @@
-import { useState } from "react";
-import { SubHeading, MenuItem } from "../../components";
+import { useEffect, useState } from "react";
+
+import { MenuItem } from "../../components";
 import Logo from "../../assets/crepe/crepe_logo.webp";
 
 import { data, images } from "../../constants";
 import "./SpecialMenu.css";
-import {
-  FaUtensils,
-  FaUtensils as FaUtensilsOutline,
-  FaHamburger,
-  FaHamburger as FaHamburgerOutline,
-  FaIceCream,
-  FaIceCream as FaIceCreamOutline,
-  FaWineBottle,
-  FaWineBottle as FaWineBottleOutline,
-  FaBeer,
-  FaBeer as FaBeerOutline,
-} from "react-icons/fa";
 
 const SpecialMenu = () => {
   const [currentState, setCurrentState] = useState("Crêpe");
+  const [menuVisible, setMenuVisible] = useState(true);
 
   const handleStateChange = (newState) => {
     setCurrentState(newState);
@@ -32,6 +22,32 @@ const SpecialMenu = () => {
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    let prevScrollPos = window.scrollY;
+
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (currentScrollPos > prevScrollPos && currentScrollPos > 2) {
+        // Scrolling down and past 2 cm
+        setMenuVisible(false);
+      } else {
+        // Scrolling up or not past 2 cm
+        setMenuVisible(true);
+      }
+
+      prevScrollPos = currentScrollPos;
+    };
+
+    // Add scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   const Crepes = () => (
     <div className="app__specialMenu-menu">
@@ -158,7 +174,7 @@ const SpecialMenu = () => {
         <p className="app__specialMenu-menu_heading">Chimney Cakes</p>
         <div className="app__specialMenu_menu_items">
           {data.Chimney_cakes.map((appetizer, index) => (
-            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer.price).toFixed(2)} />
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer?.price).toFixed(2)} />
           ))}
         </div>
       </div>
@@ -199,8 +215,37 @@ const SpecialMenu = () => {
           ))}
         </div>
       </div>
-      <div className="app__specialMenu-menu_img">
-        <img src={images.Hot_chocolat} loading="lazy" alt="hot_chocolat__img" />
+      {/* <div className="app__specialMenu-menu_img">
+        <img src={images.Smores} loading="lazy" alt="Smores__img" />
+      </div> */}
+    </div>
+  );
+
+  const AddInOnAndSyrups = () => (
+    <div className="app__specialMenu-menu">
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Add In</p>
+        <div className="app__specialMenu_menu_items">
+          {data.add_ins.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer?.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Add On</p>
+        <div className="app__specialMenu_menu_items">
+          {data.add_ons.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer?.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Toppings Syrups</p>
+        <div className="app__specialMenu_menu_items">
+          {data.toppings_Syrup.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer?.price).toFixed(2)} />
+          ))}
+        </div>
       </div>
     </div>
   );
@@ -220,6 +265,8 @@ const SpecialMenu = () => {
         return <Chimney />;
       case "Hot Chocolat":
         return <HotChocolat />;
+      case "Additives And Syrups":
+        return <AddInOnAndSyrups />;
       default:
         return <Crepes />;
     }
@@ -233,6 +280,7 @@ const SpecialMenu = () => {
     Sticks: "Sticks",
     Chimney: "Chimney",
     "Hot Chocolat": "Hot Chocolat",
+    "Additives And Syrups": "Additives And Syrups",
   };
 
   return (
@@ -249,9 +297,7 @@ const SpecialMenu = () => {
         ))}
       </div>
       <div style={{ marginBottom: "1rem" }}>
-        <p className="p__cormorant">
-          All DRINKS, HOOKAH, and FOOD are sold as is. NO REFUNDS. Tax and 18% Gratuity are not included in the prices listed on this menu.
-        </p>
+        <p className="p__cormorant">Badak ektob shi hon ? aw bshil heda l sater ?</p>
       </div>
 
       {renderContent()}

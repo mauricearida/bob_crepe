@@ -42,6 +42,7 @@ import Mini_pancacke from "../assets/crepe/mini_pancacke.jpeg";
 import Sarvioardi from "../assets/crepe/sarvioardi.jpeg";
 import Chimney_cakes from "../assets/crepe/chimney_cakes.jpeg";
 import Hot_chocolat from "../assets/crepe/hot_chocolat.jpeg";
+import Smores from "../assets/crepe/smores.jpeg";
 
 export default {
   bg,
@@ -86,4 +87,5 @@ export default {
   Sarvioardi,
   Chimney_cakes,
   Hot_chocolat,
+  Smores,
 };

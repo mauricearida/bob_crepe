@@ -93,6 +93,11 @@ const Chimney_cakes = [
   { title: "Lotus", price: 8.5 },
   { title: "Cream And Nutella", price: 8.5 },
   { title: "Cream And Lotus", price: 9 },
+  { title: "CREPFFLE Specialty :", price: 0 },
+  { title: "MacaRa #1", price: 9 },
+  { title: "MacaRa #2", price: 9 },
+  { title: "MacaRa #3", price: 11 },
+  { title: "MacaRa #4", price: 15 },
 ];
 const chocolat_fountain = [
   { title: "Marshmallow Stick", price: 3 },
@@ -121,6 +126,42 @@ const Smores = [
   { title: "Dark Chocolate", price: 6 },
 ];
 
+const add_ins = [
+  { title: "Nutella B-Ready", price: 1.15 },
+  { title: "Kinder", price: 1 },
+  { title: "Caprice (White, Chocolate or Dark)", price: 1 },
+  { title: "Hershey’s Choco Tube White", price: 1 },
+  { title: "Hershey’s Choco Tube Dark", price: 1 },
+  { title: "Flake", price: 1 },
+  { title: "Cad-berry Fingers", price: 1 },
+  { title: "Kinder Fingers", price: 1 },
+  { title: "Galaxy Flute", price: 1 },
+  { title: "Twix Wafer Rolls", price: 1 },
+  { title: "Twix", price: 1 },
+];
+
+const add_ons = [
+  { title: "Strawberry", price: 1.25 },
+  { title: "Banana", price: 1 },
+  { title: "Oreo", price: 0.75 },
+  { title: "Panda", price: 0.75 },
+  { title: "Caprice", price: 1 },
+  { title: "Sprinkles", price: 0.25 },
+  { title: "m&m’s", price: 0.75 },
+  { title: "Hazelnut", price: 1 },
+  { title: "Almond", price: 1 },
+  { title: "Cashew", price: 1 },
+  { title: "Peanut", price: 0.75 },
+];
+
+const toppings_Syrup = [
+  { title: "Bounty", price: 1.5 },
+  { title: "Snickers", price: 1.5 },
+  { title: "Hershey’s Special Dark", price: 1 },
+  { title: "Hershey’s Caramel", price: 1 },
+  { title: "Hershey’s Strawberry", price: 1 },
+  { title: "Hershey’s Chocolate Flavor", price: 1 },
+];
 export default {
   crepes,
   crepffle,
@@ -136,4 +177,7 @@ export default {
   chocolat_fountain,
   hot_chocolat,
   Smores,
+  add_ins,
+  toppings_Syrup,
+  add_ons,
 };
