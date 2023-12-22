@@ -183,7 +183,7 @@ const SpecialMenu = () => {
 
   const AddInOnAndSyrups = () => (
     <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
+      <div className="app__specialMenu-menu_wine three flex__center">
         <p className="app__specialMenu-menu_heading">Add In</p>
         <div className="app__specialMenu_menu_items">
           {data.add_ins.map((appetizer, index) => (
@@ -191,7 +191,7 @@ const SpecialMenu = () => {
           ))}
         </div>
       </div>
-      <div className="app__specialMenu-menu_wine  flex__center">
+      <div className="app__specialMenu-menu_wine three flex__center">
         <p className="app__specialMenu-menu_heading">Add On</p>
         <div className="app__specialMenu_menu_items">
           {data.add_ons.map((appetizer, index) => (
@@ -199,7 +199,7 @@ const SpecialMenu = () => {
           ))}
         </div>
       </div>
-      <div className="app__specialMenu-menu_wine  flex__center">
+      <div className="app__specialMenu-menu_wine three flex__center">
         <p className="app__specialMenu-menu_heading">Toppings Syrups</p>
         <div className="app__specialMenu_menu_items">
           {data.toppings_Syrup.map((appetizer, index) => (
@@ -215,10 +215,13 @@ const SpecialMenu = () => {
       <div className="app__specialMenu-menu_wine  flex__center">
         <p className="app__specialMenu-menu_heading">Add In</p>
         <div className="app__specialMenu_menu_items">
-          {data.PancakesAndMini.map((appetizer, index) => (
+          {data.mini_pancake.map((appetizer, index) => (
             <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer?.price).toFixed(2)} />
           ))}
         </div>
+      </div>
+      <div className="app__specialMenu-menu_img">
+        <img src={images.miniPancake} loading="lazy" alt="hot_chocolat__img" />
       </div>
     </div>
   );
