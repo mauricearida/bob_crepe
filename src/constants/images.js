@@ -44,6 +44,7 @@ import Chimney_cakes from "../assets/crepe/chimney_cakes.jpeg";
 import Hot_chocolat from "../assets/crepe/hot_chocolat.jpeg";
 import Smores from "../assets/crepe/smores.jpeg";
 import miniPancake from "../assets/crepe/mini_pancacke.jpeg";
+import chemneyCake from "../assets/crepe/chimney_cake.jpeg;";
 
 export default {
   bg,
@@ -90,4 +91,5 @@ export default {
   Hot_chocolat,
   Smores,
   miniPancake,
+  chemneyCake,
 };

@@ -106,19 +106,6 @@ const SpecialMenu = () => {
       <div className="app__specialMenu-menu_img">
         <img src={images.Pancake_stick} loading="lazy" alt="burger__img" />
       </div>
-
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Waffle Stick</p>
-        <div className="app__specialMenu_menu_items">
-          {data.waffle_stick.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
-          ))}
-        </div>
-      </div>
-
-      <div className="app__specialMenu-menu_img">
-        <img src={images.Waffle_stick} loading="lazy" alt="burger__img" />
-      </div>
     </div>
   );
 
@@ -145,6 +132,19 @@ const SpecialMenu = () => {
           ))}
         </div>
       </div>
+
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Smores} loading="lazy" alt="Sarvioardi__img" />
+      </div>
+
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Smores</p>
+        <div className="app__specialMenu_menu_items">
+          {data.Smores.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 
@@ -160,7 +160,7 @@ const SpecialMenu = () => {
       </div>
 
       <div className="app__specialMenu-menu_img">
-        <img src={images.Chimney_cakes} loading="lazy" alt="Chimney_cakes__img" />
+        <img src={images.chemneyCake} loading="lazy" alt="Chimney_cakes__img" />
       </div>
     </div>
   );
