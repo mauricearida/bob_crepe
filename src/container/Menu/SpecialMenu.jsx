@@ -275,10 +275,6 @@ const SpecialMenu = () => {
           </button>
         ))}
       </div>
-      <div style={{ marginBottom: "1rem" }}>
-        <p className="p__cormorant">Badak ektob shi hon ? aw bshil heda l sater ?</p>
-      </div>
-
       {renderContent()}
     </div>
   );
