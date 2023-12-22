@@ -21,9 +21,9 @@ const SpecialMenu = () => {
     });
   };
 
-  const Crepes = () => (
+  const CrepesAndSalty = () => (
     <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
+      <div className="app__specialMenu-menu_wine flex__center">
         <p className="app__specialMenu-menu_heading">Crêpes</p>
         <div className="app__specialMenu_menu_items">
           {data.crepes.map((crepe, index) => (
@@ -36,7 +36,7 @@ const SpecialMenu = () => {
         <img src={images.creppfle} loading="lazy" alt="crepe__img" />
       </div>
 
-      <div className="app__specialMenu-menu_cocktails  flex__center">
+      <div className="app__specialMenu-menu_cocktails flex__center">
         <p className="app__specialMenu-menu_heading">Crêpffle Speciality</p>
         <div className="app__specialMenu_menu_items">
           {data.crepffle.map((entree, index) => (
@@ -47,24 +47,36 @@ const SpecialMenu = () => {
       <div className="app__specialMenu-menu_img">
         <img src={images.crepe_red} loading="lazy" alt="Crêpffle__img" />
       </div>
-    </div>
-  );
 
-  const SaltyAndWaffle = () => (
-    <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Salty Crêpes</p>
+      <div className="app__specialMenu-menu_cocktails flex__center">
+        <p className="app__specialMenu-menu_heading">Salty</p>
         <div className="app__specialMenu_menu_items">
-          {data.salty_crepes.map((salty, index) => (
-            <MenuItem key={salty.title + index} title={salty.title} price={Number(salty.price).toFixed(2)} />
+          {data.salty_crepes.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
           ))}
         </div>
       </div>
 
       <div className="app__specialMenu-menu_img">
-        <img src={images.salty} loading="lazy" alt="salty__img" />
+        <img src={images.crepe_red} loading="lazy" alt="Crêpffle__img" />
+      </div>
+    </div>
+  );
+
+  const Waffle = () => (
+    <div className="app__specialMenu-menu">
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Waffle Stick</p>
+        <div className="app__specialMenu_menu_items">
+          {data.waffle_stick.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
+          ))}
+        </div>
       </div>
 
+      <div className="app__specialMenu-menu_img">
+        <img src={images.Waffle_stick} loading="lazy" alt="burger__img" />
+      </div>
       <div className="app__specialMenu-menu_cocktails  flex__center">
         <p className="app__specialMenu-menu_heading">Honkong Egg Waffle</p>
         <div className="app__specialMenu_menu_items">
@@ -110,21 +122,8 @@ const SpecialMenu = () => {
     </div>
   );
 
-  const SavioardiBiscuits = () => (
+  const CrepffleBuffet = () => (
     <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">Mini Pancakes</p>
-        <div className="app__specialMenu_menu_items">
-          {data.mini_pancake.map((appetizer, index) => (
-            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer.price).toFixed(2)} />
-          ))}
-        </div>
-      </div>
-
-      <div className="app__specialMenu-menu_img">
-        <img src={images.Mini_pancacke} loading="lazy" alt="mini_pancacke__img" />
-      </div>
-
       <div className="app__specialMenu-menu_cocktails  flex__center">
         <p className="app__specialMenu-menu_heading">Savioardi Biscuits</p>
         <div className="app__specialMenu_menu_items">
@@ -137,10 +136,19 @@ const SpecialMenu = () => {
       <div className="app__specialMenu-menu_img">
         <img src={images.Sarvioardi} loading="lazy" alt="Sarvioardi__img" />
       </div>
+
+      <div className="app__specialMenu-menu_cocktails  flex__center">
+        <p className="app__specialMenu-menu_heading">Chocolat Fountains</p>
+        <div className="app__specialMenu_menu_items">
+          {data.chocolat_fountain.map((entree, index) => (
+            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 
-  const Chimney = () => (
+  const ChimneyCake = () => (
     <div className="app__specialMenu-menu">
       <div className="app__specialMenu-menu_wine  flex__center">
         <p className="app__specialMenu-menu_heading">Chimney Cakes</p>
@@ -153,15 +161,6 @@ const SpecialMenu = () => {
 
       <div className="app__specialMenu-menu_img">
         <img src={images.Chimney_cakes} loading="lazy" alt="Chimney_cakes__img" />
-      </div>
-
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Chocolat Fountains</p>
-        <div className="app__specialMenu_menu_items">
-          {data.chocolat_fountain.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
-          ))}
-        </div>
       </div>
     </div>
   );
@@ -179,17 +178,6 @@ const SpecialMenu = () => {
       <div className="app__specialMenu-menu_img">
         <img src={images.Hot_chocolat} loading="lazy" alt="hot_chocolat__img" />
       </div>
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">S’mores</p>
-        <div className="app__specialMenu_menu_items">
-          {data.Smores.map((entree, index) => (
-            <MenuItem key={entree.title + index} title={entree.title} price={Number(entree.price).toFixed(2)} />
-          ))}
-        </div>
-      </div>
-      {/* <div className="app__specialMenu-menu_img">
-        <img src={images.Smores} loading="lazy" alt="Smores__img" />
-      </div> */}
     </div>
   );
 
@@ -222,37 +210,53 @@ const SpecialMenu = () => {
     </div>
   );
 
+  const PancakesAndMini = () => (
+    <div className="app__specialMenu-menu">
+      <div className="app__specialMenu-menu_wine  flex__center">
+        <p className="app__specialMenu-menu_heading">Add In</p>
+        <div className="app__specialMenu_menu_items">
+          {data.PancakesAndMini.map((appetizer, index) => (
+            <MenuItem key={appetizer.title + index} title={appetizer.title} price={Number(appetizer?.price).toFixed(2)} />
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+
   // Render content based on the current state
   const renderContent = () => {
     switch (currentState) {
-      case "Crêpe":
-        return <Crepes />;
-      case "Salty and Waffles":
-        return <SaltyAndWaffle />;
+      case "Crêpe & Salty":
+        return <CrepesAndSalty />;
+      case "Waffle":
+        return <Waffle />;
       case "Sticks":
         return <Sticks />;
-      case "Savioardi Biscuits":
-        return <SavioardiBiscuits />;
-      case "Chimney":
-        return <Chimney />;
+      case "Crepffle Buffet":
+        return <CrepffleBuffet />;
+      case "Chimney Cake":
+        return <ChimneyCake />;
       case "Hot Chocolat":
         return <HotChocolat />;
-      case "Additives And Syrups":
+      case "Additives & Syrups":
         return <AddInOnAndSyrups />;
+      case "Pancakes & mini":
+        return <PancakesAndMini />;
       default:
-        return <Crepes />;
+        return <CrepesAndSalty />;
     }
   };
 
   // Icon components for each state
   const stateIcons = {
-    Crêpes: "Crêpes",
-    "Salty and Waffles": "Salty and Waffles",
-    "Savioardi Biscuits": "Savioardi Biscuits",
+    "Crêpe & Salty": "Crêpes",
+    "Pancakes & mini": "Pancakes & mini",
+    Waffle: "Waffle",
+    "Crepffle Buffet": "Crepffle Buffet",
     Sticks: "Sticks",
-    Chimney: "Chimney",
+    "Chimney Cake": "Chimney Cake",
     "Hot Chocolat": "Hot Chocolat",
-    "Additives And Syrups": "Additives And Syrups",
+    "Additives & Syrups": "Additives & Syrups",
   };
 
   return (

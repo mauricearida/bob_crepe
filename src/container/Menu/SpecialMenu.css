@@ -34,6 +34,7 @@
   margin: 2rem 0;
 
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   flex-direction: row;
@@ -53,11 +54,13 @@
   flex: 1;
   width: 100%;
   flex-direction: column;
+  max-width: 500px;
 }
 
 .app__specialMenu-menu_img {
   width: 410px;
   margin: 0 2rem;
+  justify-content: center;
 }
 
 .app__specialMenu-menu_img img {
