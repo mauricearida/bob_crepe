@@ -125,7 +125,6 @@ const Smores = [
   { title: "Milky Chocolate", price: 5 },
   { title: "Dark Chocolate", price: 6 },
 ];
-
 const add_ins = [
   { title: "Nutella B-Ready", price: 1.15 },
   { title: "Kinder", price: 1 },
@@ -139,7 +138,6 @@ const add_ins = [
   { title: "Twix Wafer Rolls", price: 1 },
   { title: "Twix", price: 1 },
 ];
-
 const add_ons = [
   { title: "Strawberry", price: 1.25 },
   { title: "Banana", price: 1 },
@@ -153,7 +151,6 @@ const add_ons = [
   { title: "Cashew", price: 1 },
   { title: "Peanut", price: 0.75 },
 ];
-
 const toppings_Syrup = [
   { title: "Bounty", price: 1.5 },
   { title: "Snickers", price: 1.5 },
@@ -162,6 +159,7 @@ const toppings_Syrup = [
   { title: "Hershey’s Strawberry", price: 1 },
   { title: "Hershey’s Chocolate Flavor", price: 1 },
 ];
+
 export default {
   crepes,
   crepffle,
