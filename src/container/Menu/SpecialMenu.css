@@ -16,7 +16,7 @@
 
 .app__specialMenu {
   flex-direction: column;
-  background: var(--color-black);
+  background: #faf9f6;
 }
 
 .app__findus {

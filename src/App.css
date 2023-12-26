@@ -9,11 +9,11 @@
 }
 
 .app__bg {
-  background: url("./assets/bg.png");
-  background-position: center;
+  background: #faf9f6;
+  /* background-position: center;
   background-size: cover;
   background-repeat: repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
 }
 
 .app__wrapper {
